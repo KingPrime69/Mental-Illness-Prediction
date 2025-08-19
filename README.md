@@ -48,7 +48,7 @@ The dataset is organized by OMH Region-specific (Region of Provider) and program
 
 ```bash
 # Clone the repository
-git clone (https://github.com/KingPrime69/Mental-Illness-Prediction.git)
+git clone https://github.com/KingPrime69/Mental-Illness-Prediction.git
 cd [Mental-Illness-Prediction]
 
 # Install required packages
