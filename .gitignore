@@ -1,5 +1,11 @@
 .venv/
 .github/
-data/raw/**
-data/processed/**
-data/models/**
+
+data/raw/*
+data/processed/*
+data/models/*
+
+# mais garder les placeholders
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/models/.gitkeep
