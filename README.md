@@ -84,9 +84,16 @@ pip install -r requirements.txt
 |  └── app.py
 ├── data/
 |  ├── models/
+|  |  ├── random_forest_model.pkl
+|  |  └── xgb_model.pkl
 |  ├── processed/
 |  ├── raw/
 |    └── Patient.csv
+├── src/
+|  ├── EDA.py
+|  ├── preprocessing.py
+|  └── training.py
+├──  app.py
 ├──  requirements.txt
 └── README.md
 ```
