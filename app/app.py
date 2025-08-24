@@ -9,7 +9,7 @@ import os
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
 
-model = joblib.load('./data/models/random_forest_model_v0.pkl')
+model = joblib.load('./data/models/random_forest_model_v0.5.pkl')
 
 # data = pd.read_csv('./data/processed/data.csv')
 
