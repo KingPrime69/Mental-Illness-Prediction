@@ -9,7 +9,7 @@ import os
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
 
-model = joblib.load('./data/models/random_forest_model.pkl')
+model = joblib.load('./data/models/random_forest_model_v0.5.pkl')
 
 # data = pd.read_csv('./data/processed/data.csv')
 
@@ -75,6 +75,8 @@ def form():
 
             input_data = np.array(ordered_data).reshape(1, -1)
 
+            # call preprocessing function
+
             probabilities = model.predict_proba(input_data)
             prediction_class = model.predict(input_data)[0]
             
@@ -109,6 +111,8 @@ def result():
     trust = session.get('trust', 0)
 
     return render_template('result.html', prediction=prediction, trust=trust)
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
