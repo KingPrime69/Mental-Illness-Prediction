@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="card">
+        <h2>Your Mental Illness Prediction</h2>
+        <div id="prediction-result">
+            <h3 style="font-size: 2em; margin-bottom: 15px;">
+                Risk Level: <strong>{{ prediction }}</strong>
+            </h3>
+            
+            {% if prediction == 'LOW' %}
+                <p>✅ Low risk detected. Maintain your current lifestyle.</p>
+            {% elif prediction == 'MEDIUM' %}
+                <p>⚠️ Moderate risk detected. Consider professional consultation.</p>
+            {% else %}
+                <p>🚨 High risk detected. Professional consultation recommended.</p>
+            {% endif %}
+        </div>
+
+        <div class="trust">
+            <h3>Trust Levels</h3>
+            <div class="trust-bar">
+                <div class="trust-fill" id="trustBar" style="width: 0%;"></div>
+            </div>
+            <p>Trust : <span id="trustText">0%</span></p>
+        </div>
+
+        <div>
+            <a href="/" class="btn result">Go back to Home</a>
+            <a href="form" class="btn result">New Prediction</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const trust = {{ trust }};
+        const trustBar = document.getElementById('trustBar');
+        const trustText = document.getElementById('trustText');
+        
+        setTimeout(function() {
+            trustBar.style.width = trust + '%';
+
+            let current = 0;
+            const increment = trust / 50;
+            
+            const timer = setInterval(function() {
+                current += increment;
+                if (current >= trust) {
+                    current = trust;
+                    clearInterval(timer);
+                }
+                trustText.textContent = Math.round(current) + '%';
+            }, 40);
+            
+        }, 500);
+    });
+</script>
+{% endblock %}

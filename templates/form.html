@@ -1,0 +1,626 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+   <div class="card">
+       <h2>Mental Illness Prediction Form</h2>
+       <form action="/form" method="post">
+           <h3>Socio-demographic Information :</h3>
+           <div class="grid">
+               <!-- Socio-demographic information -->
+               <div class="group">
+                   <label for="Age Group">Age:</label>
+                   <select id="Age Group" name="Age Group" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="child">Minor</option>
+                       <option value="Adult">Adult</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Sex">Sex:</label>
+                   <select id="Sex" name="Sex" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="Male">Male</option>
+                       <option value="Female">Female</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Preferred Language">Preferred Language:</label>
+                   <select id="Preferred Language" name="Preferred Language" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="English">English</option>
+                       <option value="Spanish">Spanish</option>
+                       <option value="Indo-European">Indo-European</option>
+                       <option value="Asian and Pacific Island">Asian and Pacific Island</option>
+                       <option value="Afro-Asiatic">Afro-Asiatic</option>
+                       <option value="all other language">Other</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Religious Preference">Religious Preference:</label>
+                   <select id="Religious Preference" name="Religious Preference" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="I belong to a formal religion group">I belong to a formal religion group</option>
+                       <option value="I consider myself spiritual, but not religious">I consider myself spiritual, but not religious</option>
+                       <option value="I do not have a formal religion, or am I a spiritual person">I do not have a formal religion, or am I a spiritual person</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Race">Race:</label>
+                   <select id="Race" name="Race" required>
+                       <option value="UNKNOWN RACE">Unknown</option>
+                       <option value="WHITE ONLY">White</option>
+                       <option value="BLACK ONLY">Black</option>
+                       <option value="MULTI-RACIAL">Multi-racial</option>
+                       <option value="OTHER">Other</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Hispanic Ethnicity">Hispanic Ethnicity:</label>
+                   <select id="Hispanic Ethnicity" name="Hispanic Ethnicity" required>
+                       <option value="UNKNOWN">Unknown</option>
+                       <option value="NO">No</option>
+                       <option value="YES">Yes</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Transgender">Transgender:</label>
+                   <select id="Transgender" name="Transgender" required>
+                       <option value="UNKNOWN">Unknown</option>
+                       <option value="NO, NOT TRANSGENDER">No</option>
+                       <option value="YES, TRANSGENDER">Yes</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Sexual Orientation">Sexual orientation:</label>
+                   <select id="Sexual Orientation" name="Sexual Orientation" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="STRAIGHT OR HETEROSEXUAL">Straight or heterosexual</option>
+                       <option value="BISEXUAL">Bisexual</option>
+                       <option value="LESBIAN OR GAY">Gay or lesbian</option>
+                       <option value="OTHER">Other</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Program Category">Program Category:</label>
+                   <select id="Program Category" name="Program Category" required>
+                       <option value="UNKNOWN">UNKNOWN</option>
+                       <option value="OUTPATIENT">Outpatient</option>
+                       <option value="RESIDENTIAL">Residential</option>
+                       <option value="SUPPORT">Support</option>
+                       <option value="INPATIENT">Inpatient</option>
+                       <option value="EMERGENCY">Emergency</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Region Served">Region Served:</label>
+                   <select id="Region Served" name="Region Served" required>
+                       <option value="UNKNOWN">Unknow</option>
+                       <option value="NEW YORK CITY REGION">New York region</option>
+                       <option value="WESTERN REGION">Western region</option>
+                       <option value="HUDSON RIVER REGION">Hudson region</option>
+                       <option value="CENTRAL NY REGION">Central NY region</option>
+                       <option value="LONG ISLAND REGION">Long Island region</option>
+                   </select>
+               </div>
+           </div>
+           <h3>Family and social situation :</h3>
+           <div class="grid">
+               <!-- Family and social situation -->
+                <div class="group">
+                   <label for="Living Situation">Living situation:</label>
+                   <select id="Living Situation" name="Living Situation" required>
+                       <option value="UNKNOWN">Unknow</option>
+                       <option value="PRIVATE RESIDENCE">Private residence</option>
+                       <option value="OTHER LIVING SITUATION">Other living situation</option>
+                       <option value="INSTITUTIONAL SETTING">Institutional setting</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Household Composition">Household composition:</label>
+                   <select id="Household Composition" name="Household Composition" required>
+                       <option value="UNKNOWN">Unknow</option>
+                       <option value="COHABITATES WITH OTHERS">Cohabiting</option>
+                       <option value="LIVES ALONE">Single</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Veteran Status">Veteran Status:</label>
+                   <select id="Veteran Status" name="Veteran Status" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Criminal Justice Status">Criminal Justice Status:</label>
+                   <select id="Criminal Justice Status" name="Criminal Justice Status" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+           </div>
+           <h3>Health and Mental Health Information :</h3>
+           <div class="grid">
+               <!-- Professional and educational background -->
+               <div class="group">
+                   <label for="Employment Status">Employment Status:</label>
+                   <select id="Employment Status" name="Employment Status" required>
+                       <option value="UNKNOWN EMPLOYMENT STATUS">Unknow</option>
+                       <option value="NOT IN LABOR FORCE:UNEMPLOYED AND NOT LOOKING FOR WORK">Unemployed and not looking for work</option>
+                       <option value="EMPLOYED">Employed</option>
+                       <option value="UNEMPLOYED, LOOKING FOR WORK">Unemployed and looking for work</option>
+                       <option value="NON-PAID/VOLUNTEER">Non-paid/volunteer</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Education Status">Education Status:</label>
+                   <select id="Education Status" name="Education Status" required>
+                       <option value="UNKNOWN">Unknow</option>
+                       <option value="MIDDLE SCHOOL TO HIGH SCHOOL">Middle school to high school</option>
+                       <option value="COLLEGE OR GRADUATE DEGREE">College or graduate degree</option>
+                       <option value="SOME COLLEGE EXPERIENCE">Some college experience</option>
+                       <option value="PRE-K TO FIFTH GRADE">Pre-k to fifth grade</option>
+                       <option value="OTHER">Other</option>
+                       <option value="NO FORMAL EDUCATION">No formal education</option>
+                   </select>
+               </div>
+           </div>
+           <h3>Developmental Disorders :</h3>
+           <div class="grid">
+               <!-- Developmental disorders -->
+               <div class="group">
+                   <label for="Intellectual Disability">Intellectual Disability:</label>
+                   <select id="Intellectual Disability" name="Intellectual Disability" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Autism Spectrum">Autism Spectrum:</label>
+                   <select id="Autism Spectrum" name="Autism Spectrum" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Other Developmental Disability">Other Developmental Disability:</label>
+                   <select id="Other Developmental Disability" name="Other Developmental Disability" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+           </div>
+           <h3>Addictions/Substance Use :</h3>
+           <div class="grid">
+               <!-- Addictions/Substance Use -->
+               <div class="group">
+                   <label for="Alcohol Related Disorder">Alcohol disorder:</label>
+                   <select id="Alcohol Related Disorder" name="Alcohol Related Disorder" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Drug Substance Disorder">Drug disorder:</label>
+                   <select id="Drug Substance Disorder" name="Drug Substance Disorder" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Opioid Related Disorder">Opioid disorder:</label>
+                   <select id="Opioid Related Disorder" name="Opioid Related Disorder" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Cannabis Recreational Use">Cannabis recreational Use:</label>
+                   <select id="Cannabis Recreational Use" name="Cannabis Recreational Use" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Cannabis Medicinal Use">Cannabis medicinal Use:</label>
+                   <select id="Cannabis Medicinal Use" name="Cannabis Medicinal Use" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Smokes">Smokes:</label>
+                   <select id="Smokes" name="Smokes" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Received Smoking Medication">Received Smoking medication:</label>
+                   <select id="Received Smoking Medication" name="Received Smoking Medication" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Received Smoking Counseling">Received Smoking counseling:</label>
+                   <select id="Received Smoking Counseling" name="Received Smoking Counseling" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Alcohol 12m Service">Alcohol 12m service:</label>
+                   <select id="Alcohol 12m Service" name="Alcohol 12m Service" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Opioid 12m Service">Opioid 12m service:</label>
+                   <select id="Opioid 12m Service" name="Opioid 12m Service" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Drug/Substance 12m Service">Drug/Substance 12m service:</label>
+                   <select id="Drug/Substance 12m Service" name="Drug/Substance 12m Service" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+           </div>
+           <h3>Physical health / Medical conditions :</h3>
+           <div class="grid">
+               <!-- Physical health / Medical conditions -->
+                <div class="group">
+                   <label for="Mobility Impairment Disorder">Mobility impairment:</label>
+                   <select id="Mobility Impairment Disorder" name="Mobility Impairment Disorder" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Hearing Impairment">Hearing impairment:</label>
+                   <select id="Hearing Impairment" name="Hearing Impairment" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Visual Impairment">Vision impairment:</label>
+                   <select id="Vision Impairment" name="Vision Impairment" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Speech Impairment">Speech impairment:</label>
+                   <select id="Speech Impairment" name="Speech Impairment" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Hyperlipidemia">Hyperlipidemia:</label>
+                   <select id="Hyperlipidemia" name="Hyperlipidemia" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="High Blood Pressure">High blood pressure:</label>
+                   <select id="High Blood Pressure" name="High Blood Pressure" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Diabetes">Diabetes:</label>
+                   <select id="Diabetes" name="Diabetes" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Obesity">Obesity:</label>
+                   <select id="Obesity" name="Obesity" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Heart Attack">Heart attack:</label>
+                   <select id="Heart Attack" name="Heart Attack" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Stroke">Stroke:</label>
+                   <select id="Stroke" name="Stroke" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Other Cardiac">Other cardiac:</label>
+                   <select id="Other Cardiac" name="Other Cardiac" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Pulmonary Asthma">Pulmonary Asthma:</label>
+                   <select id="Pulmonary Asthma" name="Pulmonary Asthma" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Alzheimer or Dementia">Alzheimer or dementia:</label>
+                   <select id="Alzheimer or Dementia" name="Alzheimer or Dementia" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Kidney Disease">Kidney disease:</label>
+                   <select id="Kidney Disease" name="Kidney Disease" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Liver Disease">Liver disease:</label>
+                   <select id="Liver Disease" name="Liver Disease" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Endocrine Condition">Endocrine conditions:</label>
+                   <select id="Endocrine Condition" name="Endocrine Condition" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Neurological Condition">Neurological condition:</label>
+                   <select id="Neurological Condition" name="Neurological Condition" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Traumatic Brain Injury">Traumatic brain injury:</label>
+                   <select id="Traumatic Brain Injury" name="Traumatic Brain Injury" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Joint Disease">Joint disease:</label>
+                   <select id="Joint Disease" name="Joint Disease" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Cancer">Cancer:</label>
+                   <select id="Cancer" name="Cancer" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Other Chronic Med Condition">Other chronic medical conditions:</label>
+                   <select id="Other Chronic Med Condition" name="Other Chronic Med Condition" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="No Chronic Med Condition">No chronic medical conditions:</label>
+                   <select id="No Chronic Med Condition" name="No Chronic Med Condition" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Unknown Chronic Med Condition">Unknown chronic medical conditions:</label>
+                   <select id="Unknown Chronic Med Condition" name="Unknown Chronic Med Condition" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+           </div>
+           <h3>Financial and social assistance :</h3>
+           <div class="grid">
+               <!-- Financial and social assistance -->
+                <div class="group">
+                   <label for="SSI Cash Assistance">SSI cash assistance:</label>
+                   <select id="SSI Cash Assistance" name="SSI Cash Assistance" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="SSDI Cash Assistance">SSDI cash assistance:</label>
+                   <select id="SSDI Cash Assistance" name="SSDI Cash Assistance" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Veterans Disability Benefits">Veterans disability benefits:</label>
+                   <select id="Veterans Disability Benefits" name="Veterans Disability Benefits" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Veterans Cash Assistance">Veterans cash assistance:</label>
+                   <select id="Veterans Cash Assistance" name="Veterans Cash Assistance" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Public Assistance Cash Program">Public assistance cash program:</label>
+                   <select id="Public Assistance Cash Program" name="Public Assistance Cash Program" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Other Cash Benefits">Other cash benefits:</label>
+                   <select id="Other Cash Benefits" name="Other Cash Benefits" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+           </div>
+           <h3>Health insurance :</h3>
+           <div class="grid">
+               <!-- Health insurance -->
+                <div class="group">
+                   <label for="Medicaid and Medicare Insurance">Medicaid and Medicare insurance:</label>
+                   <select id="Medicaid and Medicare Insurance" name="Medicaid and Medicare Insurance" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="No Insurance">No insurance:</label>
+                   <select id="No Insurance" name="No Insurance" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Unknown Insurance Coverage">Unknown insurance coverage:</label>
+                   <select id="Unknown Insurance Coverage" name="Unknown Insurance Coverage" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="false">false</option>
+                       <option value="true">true</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Medicaid Insurance">Medicaid insurance:</label>
+                   <select id="Medicaid Insurance" name="Medicaid Insurance" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Medicaid Managed Insurance">Medicaid managed insurance:</label>
+                   <select id="Medicaid Managed Insurance" name="Medicaid Managed Insurance" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Medicare Insurance">Medicare insurance:</label>
+                   <select id="Medicare Insurance" name="Medicare Insurance" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Private Insurance">Private insurance:</label>
+                   <select id="Private Insurance" name="Private Insurance" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Child Health Plus Insurance">Child health plus insurance:</label>
+                   <select id="Child Health Plus Insurance" name="Child Health Plus Insurance" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+               <div class="group">
+                   <label for="Other Insurance">Other insurance:</label>
+                   <select id="Other Insurance" name="Other Insurance" required>
+                       <option value="Unknown">Unknown</option>
+                       <option value="No">No</option>
+                       <option value="Yes">Yes</option>
+                   </select>
+               </div>
+
+
+
+           </div>
+
+           <button type="submit" class="btn">Generate prediction</button>
+       </form>
+   </div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+   const formData = {{ form_data|tojson if form_data else '{}' }};
+   
+   for (let fieldName in formData) {
+       const field = document.querySelector(`[name="${fieldName}"]`);
+       if (field && formData[fieldName] !== '') {
+           field.value = formData[fieldName];
+       }
+   }
+});
+</script>
+{% endblock %}
