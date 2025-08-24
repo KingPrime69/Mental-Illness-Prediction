@@ -1,7 +1,6 @@
 .venv/
 .github/
 
-data/raw/*
 data/processed/*
 data/models/*
 
