@@ -77,11 +77,10 @@ pip install -r requirements.txt
 |  |  ├── css/
 |  |    └── style.css
 |  ├── templates/
-|  |  ├── base.html
-|  |  ├── form.html
-|  |  ├── index.html
-|  |  └── result.html
-|  └── app.py
+|  ├── base.html
+|  ├── form.html
+|  ├── index.html
+|  └── result.html
 ├── data/
 |  ├── models/
 |  |  ├── random_forest_model.pkl
