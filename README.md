@@ -76,15 +76,15 @@ pip install -r requirements.txt
 ## Project Structure
 <!-- Describe the Jupyter notebooks -->
 ```
-├── app/
-|  ├── static/
-|  |  ├── css/
-|  |    └── style.css
-|  ├── templates/
-|  |  ├── base.html
-|  |  ├── form.html
-|  |  ├── index.html
-|     └── result.html
+
+├── static/
+|  ├── css/
+|    └── style.css
+├── templates/
+|  ├── base.html
+|  ├── form.html
+|  ├── index.html
+|  └── result.html
 ├── data/
 |  ├── models/
 |  |  ├── random_forest_model.pkl
