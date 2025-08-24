@@ -42,6 +42,17 @@ The dataset is organized by OMH Region-specific (Region of Provider) and program
 
 ### Prerequisites
 <!-- Python version, required libraries -->
+- Python : 3.11.9
+- Pandas : 2.3.2
+- Numpy : 2.2.6
+- Matplotlib : 3.10.5
+- Seaborn : 0.13.2
+- XGBoost : 3.0.4
+- Scikit-learn : 1.7.1
+- Imbalanced-learn : 0.14.0
+- SHAP : 0.48.0
+- Flask : 3.1.2
+- Joblib : 1.5.1
 
 ### Installation Steps
 <!-- How to clone repo and install dependencies -->
@@ -58,19 +69,40 @@ pip install -r requirements.txt
 ## Project Structure
 <!-- Describe the Jupyter notebooks -->
 ```
+├── app/
+│  ├── data/
+|  |  ├── models/
+|  |    └── random_forest.pkl
+|  ├── static/
+|  |  ├── css/
+|  |    └── style.css
+|  ├── templates/
+|  |  ├── base.html
+|  |  ├── form.html
+|  |  ├── index.html
+|  |  └── result.html
+|  └── app.py
 ├── data/
-├── notebooks/
-│   ├── 01_data_exploration.ipynb
-│   ├── 02_data_preprocessing.ipynb
-│   ├── 03_model_training.ipynb
-│   └── 04_model_evaluation.ipynb
-├── src/
-├── results/
+|  ├── models/
+|  ├── processed/
+|  ├── raw/
+|    └── Patient.csv
+├──  requirements.txt
 └── README.md
 ```
 
 ## Usage
-<!-- How to run the notebooks -->
+<!-- How to run the script -->
+
+### Runnning the App
+```bash
+# Go in app folder
+cd app
+
+#run app.py
+python app.py
+```
+When the server is up go to (http://127.0.0.1:5000)
 
 ### Running the Analysis
 
