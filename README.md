@@ -4,8 +4,8 @@ This project develops an end-to-end machine learning pipeline to predict the pre
 Using the New York State Office of Mental Health Patient Characteristics Survey (PCS) 2019 dataset, we build predictive models and deploy them through a web application interface.
 
 ## Overview
-<!-- Brief description of what the project doese -->
-
+The objective of this project is to develop a machine learning model pipeline that allows a user to determine whether they are likely to have a mental illness by answering a series of questions.
+This project is divided into three main parts: Data Analysis, the creation and training of a prediction model for the presence or absence of Mental Illness, and finally the development of an interface that allows a patient to fill out a form and receive feedback on whether or not they are likely to have Mental Illness.
 ## Dataset Description
 
 This project uses the **Patient Characteristics Survey (PCS) 2019** dataset from the New York State Office of Mental Health, available through the U.S. Government's open data catalog.
@@ -24,7 +24,7 @@ The dataset is organized by OMH Region-specific (Region of Provider) and program
 **Demographic Variables:**
 - **Sex**: Male, Female, Unknown
 - **Transgender Status**: No/Not Transgender, Yes/Transgender, Unknown  
-- **Age Groups**: Below 17 (Child), 18 and above (Adult), Unknown age
+- **Age Groups**: Below 21 (Child), 21 and above (Adult), Unknown age
 - **Race**: White only, Black Only, Multi-racial, Other, Unknown race
 - **Ethnicity**: Non-Hispanic, Hispanic, Client Did Not Answer, Unknown
 
@@ -32,6 +32,13 @@ The dataset is organized by OMH Region-specific (Region of Provider) and program
 - **OMH Regions**: Provider location regions across New York State
 - **Program Types**: Different mental health service programs
 - **Service Utilization**: Various metrics related to mental health service usage
+
+**Health:**
+-Various data about different diseases like Cancer
+
+**Behaviour about Substance:**
+-**Cannabis Use**: YES/NO
+-**Alcohol Use**: YES/NO
 
 **Data Quality Notes:**
 - Contains significant missing data marked as "Unknown" categories
@@ -95,8 +102,9 @@ pip install -r requirements.txt
 ```
 
 ## Usage
-<!-- How to run the script -->
-
+**Data Analyse part** : First of all, the data must be cleaned and some columns are grouped together.
+The while loops will prompt you to select the category of variables you wish to explore in order to display the corresponding graphs.
+Once the data preprocessing and encoding are completed, a correlation analysis is performed to evaluate both the relationships and the strength of the associations between the different variables.
 ### Runnning the App
 ```bash
 # Go in app folder
