@@ -70,9 +70,6 @@ pip install -r requirements.txt
 <!-- Describe the Jupyter notebooks -->
 ```
 ├── app/
-│  ├── data/
-|  |  ├── models/
-|  |    └── random_forest.pkl
 |  ├── static/
 |  |  ├── css/
 |  |    └── style.css
