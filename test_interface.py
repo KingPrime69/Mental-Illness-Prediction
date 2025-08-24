@@ -14,8 +14,8 @@ import pickle
 from sklearn.preprocessing import LabelEncoder
 
 # === Adjust if needed ===
-MODEL_PATH = r"C:/Users/maud.busserolles/OneDrive - VINCI Energies/Bureau/Projet_Mental_Illness/Mental-Illness-Prediction/notebooks/random_forest_model.pkl"
-DATA_PATH  = r"C:/Users/maud.busserolles/OneDrive - VINCI Energies/Bureau/Projet_Mental_Illness/Mental-Illness-Prediction/data/processed/data/data_clean.csv"
+MODEL_PATH = r"C:\Users\quent\Desktop\Mental-Illness-Prediction\app\data\models\random_forest_model_v0.5.pkl"
+DATA_PATH  = r"C:\Users\quent\Desktop\Mental-Illness-Prediction\data\processed\cleaned_data\cleaned_data.csv"
 
 TARGET = "Mental Illness"
 VALID_TARGET = {"YES": 1, "NO": 0}
