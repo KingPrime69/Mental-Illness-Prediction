@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+    <div class="hero">
+        <div class="container">
+            <h2>Mental Illness Prediction</h2>
+            <p>AI powered mental illness prediction system.</p>
+            <a href="form" class="btn">Start prediction</a>
+        </div>
+    </div>        
+    <div class="grid">
+            <div class="card">
+                <h3>Dataset</h3>
+                <p>New York State Patient Characteristics Survey (PCS) 2019. 76 columns and 196,102 rows of data.</p>
+            </div>
+            <div class="card">
+                <h3>Model</h3>
+                <p>Random Forest Classifier trained on the dataset.</p>
+            </div>
+        </div>
+    
+        <div class="card">
+            <h2>Project Objectives</h2>
+            <ul>
+                <li>Develop a complete machine learning pipeline</li>
+                <li>Analyze real health data</li>
+                <li>Train and evaluate classification models</li>
+                <li>Deploy via a web interface</li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
